@@ -11,8 +11,10 @@ import org.springframework.stereotype.Repository;
 @Repository
 public class StatusRepository {
     private final ObjectMapper objectMapper = new ObjectMapper();
-    private final File file = new File("\\Repositorio\\apagar\\WebSocketBox\\wb\\demo\\src\\main\\resources\\json\\statuses.json");
-
+    
+    private final File file = new File("statuses.json");
+    
+    
     public StatusRepository() {
         // Cria o arquivo se ele não existir
         if (!file.exists()) {
