@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Teste WebSocket</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.5.1/sockjs.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
+    <style>
+        #colorButton {
+            width: 100px;
+            height: 100px;
+            background-color: #000000;
+        }
+    </style>
+</head>
+<body>
+    <button id="colorButton"></button>
+
+    <script>
+        var socket = new SockJS('http://localhost:8080/ws');
+        var stompClient = Stomp.over(socket);
+        var colorButton = document.getElementById('colorButton');
+
+        stompClient.connect({}, function(frame) {
+            console.log('Connected: ' + frame);
+
+            stompClient.subscribe('/topic/newColor', function(color) {
+                colorButton.style.backgroundColor = JSON.parse(color.body).disponivel ? '#00FF00' : '#FF0000';
+            });
+
+            colorButton.addEventListener('click', function() {
+                var isAvailable = Math.random() > 0.5; 
+                var colorId = Math.floor(Math.random() * 100);
+
+                var color = {
+                    id: colorId,
+                    disponivel: isAvailable
+                };
+
+                stompClient.send("/app/setcolor", {}, JSON.stringify(color));
+            });
+        });
+    </script>
+</body>
+</html>
