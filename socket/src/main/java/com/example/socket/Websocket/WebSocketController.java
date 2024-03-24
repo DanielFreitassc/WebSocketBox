@@ -10,6 +10,7 @@ import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.io.File;
 
@@ -20,7 +21,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-@Controller
+@RestController
 public class WebSocketController {
 
     private final SimpMessagingTemplate template;
@@ -66,7 +67,7 @@ public class WebSocketController {
         if (existingColor.isPresent()) {
             return existingColor.get();
         } else {
-            Color newColor = new Color(id, false);
+            Color newColor = new Color(id, true);
             colors.add(newColor);
             objectMapper.writeValue(new File("color.json"), colors);
             return newColor;
