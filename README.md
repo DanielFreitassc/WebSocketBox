@@ -1,5 +1,6 @@
 # Como rodar a api? 
-# Com o docker em execução siga os passos abaixo. 
+# Clone o meu repositório
+# e agora com o docker em execução siga os passos abaixo. 
 ### Caso não tenha [LINK](https://www.docker.com/get-started/)
 # 1 Entre na pasta socket
 ![image](https://github.com/DanielFreitassc/WebSocketBox/assets/129224303/352b544f-621c-4b8b-8626-b0ef35412a70)
