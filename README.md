@@ -11,7 +11,12 @@ docker build -t wb . ; docker run -d -p 8080:8080 wb
 ```
 code .
 ```
-# 3 Agora abra um ternal no vscode apertando ctr + " e cole o comando abaixo
+# 3 Agora abra um ternal no vscode apertando ctr + " e cole os comando abaixo
+### baixa as coisas necessarias
+```
+npm i
+```
+# Iniciar o projeto
 ```
 npm run dev
 ```
