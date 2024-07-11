@@ -16,7 +16,6 @@ start powershell
 ```
 ![image](https://github.com/DanielFreitassc/WebSocketBox/assets/129224303/c8269771-5a8a-43f3-ae60-910f84423ee8)
 
-
 # 4 Copie e cole o scipt abaixo e precione enter lembre se de estar com o Windows PowerShell 
 
 ```yml
