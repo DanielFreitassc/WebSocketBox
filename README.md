@@ -1,6 +1,7 @@
 # Como rodar a api? 
 
 
+
 # Clone o meu repositório
 # e agora com o docker em execução siga os passos abaixo. 
 ### Caso não tenha  [Docker Dowload](https://www.docker.com/get-started/)
