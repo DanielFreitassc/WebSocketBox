@@ -45,3 +45,4 @@ npm run dev
 ```
 ![image](https://github.com/DanielFreitassc/WebSocketBox/assets/129224303/e49b378d-51de-4942-acd2-d869949e900d)
 
+
